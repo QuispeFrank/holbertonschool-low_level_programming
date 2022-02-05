@@ -8,7 +8,7 @@
 
 int main(void)
 {
-	int  a, b, c, d;
+	int  a, b, c, d, aux = 0;
 
 	for (a = 48; a <= 57; a++)
 	{
@@ -21,29 +21,35 @@ int main(void)
 			{
 				for (c = a; c <= 57; c++)
 				{
-					for (d = b + 1; d <= 57; d++)
+					for (d = 48; d <= 57; d++)
 					{
-						putchar(a);
-						putchar(b);
-						putchar(32);
-						putchar(c);
-						putchar(d);
-
-					if (a == 57 && b == 56 && c == 57 && d == 57)
+					if (aux == b)
 					{
 					}
 					else
 					{
-						putchar(44);
-						putchar(32);
+						d = b + 1;
+						aux = b;
 					}
-					}
+					putchar(a);
+					putchar(b);
+					putchar(32);
+					putchar(c);
+					putchar(d);
+
+				if (a == 57 && b == 56 && c == 57 && d == 57)
+				{
+				}
+				else
+				{
+					putchar(44);
+					putchar(32);
 				}
 			}
 		}
 	}
-
+	}
+	}
 	putchar(10);
-
 	return (0);
 }
