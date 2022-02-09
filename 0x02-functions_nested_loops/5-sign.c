@@ -2,7 +2,7 @@
 #include "main.h"
 
 /**
- * _print_sign - values if c is < = > than 0
+ * print_sign - values if c is < = > than 0
  * @c: parameter to test
  *
  * Return: c is positive: 1, c is zero: 0, c is negative: -1
