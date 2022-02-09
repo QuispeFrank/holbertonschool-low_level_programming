@@ -19,7 +19,7 @@ int _abs(int c)
 	{
 		if (c < 0)
 		{
-			toreturn = -1*c;
+			toreturn = -1 * c;
 		}
 		else
 		{
