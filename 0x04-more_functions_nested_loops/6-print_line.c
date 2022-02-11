@@ -3,6 +3,7 @@
 
 /**
  * print_line - Determine if a character is a number
+ * @n: number of lines
  * Return: ...
  */
 void print_line(int n)
