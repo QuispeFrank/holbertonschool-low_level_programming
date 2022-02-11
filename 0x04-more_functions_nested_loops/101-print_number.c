@@ -1,6 +1,5 @@
 #include "main.h"
 #include <stdio.h>
-#include <math.h>
 
 /**
  * print_number - Determine if a character is capital
@@ -32,7 +31,7 @@ void print_number(int n)
 
 	/*if n is negative it'll prints - before the number*/
 	if (signo == -1)
-	{ _putchar(45);	}
+	{ _putchar('-'); }
 
 	/*prints n with putchar*/
 	for (times = digits; times >= 1; times--)
@@ -47,6 +46,6 @@ void print_number(int n)
 
 		out = n / div;
 		n = n % div;
-		_putchar(out + 48);
+		_putchar(out + '0');
 	}
 }
