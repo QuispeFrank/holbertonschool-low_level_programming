@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- * print_most_numbers - Determine if a character is a number
+ * more_numbers - Determine if a character is a number
  * Return: ...
  */
 void more_numbers(void)
@@ -13,17 +13,13 @@ void more_numbers(void)
 	{
 		for (number = 0; number <= 14; number++)
 		{
-			if (number < 10)
+			if (number >= 10)
 			{
-				_putchar(48 + number);
-			}
-			else
-			{
-				u = number % 10;
 				d = 1;
 				_putchar(d + 48);
-				_putchar(u + 48);
 			}
+			u = number % 10;
+			_putchar(u + 48);
 		}
 		_putchar(10);
 	}
