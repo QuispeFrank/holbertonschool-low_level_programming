@@ -7,44 +7,39 @@
  */
 void print_number(int n)
 {
-	int digits = 0;
-	int times, out, i, div;
-	int test = 10;
-	int res = 99;
-	int signo = 99;
+	int digitos = 10;
+	int signo = 1;
+	int coc, res, d, j;
 
-	/*Determine if n is negative*/
+	/*test if n is negative*/
 	if (n < 0)
 	{
-		n = n * -1;
-		signo = -1;
+	signo = -1;
+	_putchar(45);
 	}
 
-	/*Determine the number of digits of n*/
-	while (res != 0)
+	while (digitos > 0)
 	{
-		res = n / test;
-		digits++;
-		test = 10 * test;
-	}
+		/*block to determine divisor d new value*/
+		d = 1;
+		j = digitos - 1;
 
-	/*if n is negative it'll prints - before the number*/
-	if (signo == -1)
-	{ _putchar('-'); }
+		while (j > 0)
+		{
+			d = d * 10;
+			j--;
+		}
+		/*determine res value*/
+		coc = n / d;
+		res = (coc % 10) * signo;
 
-	/*prints n with putchar*/
-	for (times = digits; times >= 1; times--)
-	{
-		if (times == 1)
-		{ div = 1; }
-		else
-		{ div = 10; }
+		/*print res*/
+		if (coc != 0 && res != 0)
+		_putchar(res + 48);
+		if (n == 0 && digitos == 1)
+		_putchar(res + 48);
 
-		for (i = times - 1; i > 1; i--)
-		{ div = div * 10; }
+		digitos--;
 
-		out = n / div;
-		n = n % div;
-		_putchar(out + '0');
 	}
 }
