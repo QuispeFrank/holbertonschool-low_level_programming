@@ -14,8 +14,8 @@ void print_number(int n)
 	/*test if n is negative*/
 	if (n < 0)
 	{
-	signo = -1;
-	_putchar(45);
+		signo = -1;
+		_putchar(45);
 	}
 
 	while (digitos > 0)
@@ -34,10 +34,8 @@ void print_number(int n)
 		res = (coc % 10) * signo;
 
 		/*print res*/
-		if (coc != 0 && res != 0)
-		_putchar(res + 48);
-		if (n == 0 && digitos == 1)
-		_putchar(res + 48);
+		if (coc != 0 || (n == 0 && digitos == 1))
+		{ _putchar(res + 48); }
 
 		digitos--;
 
