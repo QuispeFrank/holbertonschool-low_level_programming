@@ -22,5 +22,6 @@ while (i >= 0)
 	s = s - 1;
 	i--;
 }
-	_putchar(10);
+_putchar('\0');
+_putchar(10);
 }
