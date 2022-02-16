@@ -19,6 +19,7 @@ void print_array(int *a, int n)
 		printf("%d, ", a[index]);
 		index += 1;
 		if (index  == (n_elements - 1))
-			printf("%d\n", a[index]);
+			printf("%d", a[index]);
 	}
+	printf("\n");
 }
