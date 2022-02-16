@@ -7,21 +7,21 @@
 
 void rev_string(char *s)
 {
-	int index = 0;
+	int n_elements = 0;
 	int Max_changes, changes = 1;
 	char aux;
 
-	while (s[index] != '\0')
+	while (s[n_elements] != '\0')
 	{
-		index++;
+		n_elements++;
 	}
-	Max_changes = index / 2;
+	Max_changes = n_elements / 2;
 
 	while (changes <= Max_changes)
 	{
 		aux = s[changes - 1];
-		s[changes - 1] = s[index - changes];
-		s[index - changes] = aux;
+		s[changes - 1] = s[n_elements - changes];
+		s[n_elements - changes] = aux;
 		changes++;
 	}
 }
