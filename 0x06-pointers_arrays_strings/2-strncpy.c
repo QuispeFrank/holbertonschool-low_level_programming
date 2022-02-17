@@ -37,25 +37,20 @@ char *_strncpy(char *dest, char *src, int n)
 
 	/* setting the limit to n elements */
 	if (n < n_elem_src)
-	{
 		limit = n;
-	}
 	else
-	{
 		limit = n_elem_src;
-
-		j = 0;
-		while (j < n_elem_dest)
-		{
-			dest[j] = '\0';
-			j++;
-		}
-	}
 
 	/*concatenating */
 	for (j = 0; j < limit; j++)
 	{
 		dest[j] = src[j];
+	}
+
+	while (n_elem_src < n)
+	{
+		dest[n_elem_src] = '\0';
+		n_elem_src++;
 	}
 
 	return (dest);
