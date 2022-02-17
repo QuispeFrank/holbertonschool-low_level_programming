@@ -10,7 +10,7 @@
  * The _strncat function is similar to the _strcat function, except that
  * it will use at most n bytes from src
  * src does not need to be null-terminated if it contains n or more bytes.
- * 
+ *
  * @dest: A pointer to the string to be concatenated upon.
  * @src: The source string to be appended to @dest.
  * @n: number of elements to be concatenated.
@@ -23,7 +23,7 @@ char *_strncat(char *dest, char *src, int n)
 
 	int n_elem_src = 0, n_elem_dest = 0;
 	int j;
-	
+
 	/* counting arrays */
 	while (src[n_elem_src] != '\0')
 	{
