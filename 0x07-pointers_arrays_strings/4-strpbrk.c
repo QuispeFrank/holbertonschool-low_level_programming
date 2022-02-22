@@ -38,7 +38,7 @@ char *_strpbrk(char *s, char *accept)
 		i += 1;
 		counter += 1;
 	}
-	if (catch == 1)
+	if (catch != 1)
 		return (NULL);
 	return (s + counter);
 }
