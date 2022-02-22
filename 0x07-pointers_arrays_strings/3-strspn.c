@@ -12,7 +12,7 @@
  * @s: A pointer to array of chars where to find the chars
  * @accept: array of chars from it gets the char
  *
- * Return: the number of bytes in the initial segment of s which 
+ * Return: the number of bytes in the initial segment of s which
  * consist only of bytes from accept
  */
 unsigned int _strspn(char *s, char *accept)
@@ -25,7 +25,7 @@ unsigned int _strspn(char *s, char *accept)
 		catch = 0;
 		j = 0;
 
-		while(accept[j] != '\0')
+		while (accept[j] != '\0')
 		{
 			if (s[i] == accept[j])
 			{
@@ -36,7 +36,7 @@ unsigned int _strspn(char *s, char *accept)
 			}
 			j += 1;
 		}
-		if(catch == 0)
+		if (catch == 0)
 			break;
 	}
 	return (counter);
