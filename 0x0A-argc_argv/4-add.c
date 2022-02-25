@@ -14,7 +14,6 @@
  *
  * Return: 1 - If one of the number contains symbols.
  * 0 - otherwise.
- *         
  */
 int main(int argc, char *argv[])
 {
