@@ -9,43 +9,32 @@
 /**
  * main - adds positive numbers.
  *
- * @argc: argument counter
- * @argv: argument vector
+ * @argc: argument counter.
+ * @argv: argument vector.
  *
- * Return: SUCCESS
- *
+ * Return: 1 - If one of the number contains symbols.
+ * 0 - otherwise.
+ *         
  */
-
 int main(int argc, char *argv[])
 {
-	int suma = 0;
-	int bad = 0;
+	int y, x, sum = 0;
 
-	if (argc == 1)
+	for (y = 1; y < argc; y++)
 	{
-		printf("0\n");
-		return (0);
-	}
-
-	while (--argc)
-	{
-		char *p = argv[argc];
-
-		if (*p >= 48 && *p <= 57)
+		for (x = 0; argv[y][x]; x++)
 		{
-			suma += atoi(argv[argc]);
-			continue;
+			if (argv[y][x] < '0' || argv[y][x] > '9')
+			{
+				printf("Error\n");
+				return (1);
+			}
 		}
-		bad = 1;
-		break;
+
+		sum += atoi(argv[y]);
 	}
 
-	if (bad == 1)
-	{
-		printf("Error\n");
-		return (1);
-	}
-	else
-		printf("%d\n", suma);
+	printf("%d\n", sum);
+
 	return (0);
 }
