@@ -7,6 +7,24 @@
 #include <stdlib.h>
 
 /**
+ * free_grid -  a function that frees a 2 dimensional grid
+ * previously created by your alloc_grid function.
+ *
+ * @grid: pointers to be freed.
+ * @height: height of grid.
+ *
+ * Return: nothing
+ */
+void free_grid(int **grid, int height)
+{
+	int y = -1;
+
+	while (height > ++y)
+		free(grid[y]);
+	free(grid);
+}
+
+/**
  * alloc_grid - a function that returns a pointer to a 2
  * dimensional array of integers.
  *
@@ -26,21 +44,24 @@ int **alloc_grid(int width, int height)
 
 	p = malloc(sizeof(int *) * height);
 	/* p exists? */
-	if (p != NULL)
+	if (p == NULL)
+		return (NULL);
+
+	for (y = 0; y < height; y++)
 	{
-		for (y = 0; y < height; y++)
+		p[y] = malloc(sizeof(int) * width);
+		/* p[y] exists again? */
+		if (p[y] == NULL)
 		{
-			p[y] = malloc(sizeof(int) * width);
-			/* p[y] exists again? */
-			if (p[y] == NULL)
-				return (NULL);
+			free_grid(p, y + 1);
+			return (NULL);
 		}
-		for (y = 0; y < height; y++)
-		{
-			/* fill the matrix */
-			for (x = 0; x < width; x++)
-				p[y][x] = 0;
-		}
+	}
+	for (y = 0; y < height; y++)
+	{
+		/* fill the matrix */
+		for (x = 0; x < width; x++)
+			p[y][x] = 0;
 	}
 	return (p);
 }
