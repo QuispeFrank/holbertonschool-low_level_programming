@@ -1,5 +1,5 @@
 /*
- * File: 0-create_array.c
+ * File: 1-strdup.c
  * Auth: Quispe Frank
  */
 
@@ -7,14 +7,14 @@
 #include <stdlib.h>
 
 /**
- * _strdup - creates an array of chars, and initializes
- * it with a specific char.
+ * _strdup - eturns a pointer to a newly allocated 
+ * space in memory, which contains a copy of the 
+ * string given as a parameter. 
  *
  * @str: argument counter.
  *
- * Return: NULL if size = 0
- * a pointer to the array, or NULL if it fails
- */
+ * Return: NULL if str = NULL or insufficient memory was available
+ * */
 char *_strdup(char *str)
 {
 	char *p;
@@ -23,6 +23,7 @@ char *_strdup(char *str)
 	if (str == NULL)
 		return (NULL);
 	for (i = 0; str[i]; i++)
+	{}
 
 	p = malloc(sizeof(char) * (i + 1));
 
