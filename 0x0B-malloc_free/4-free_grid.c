@@ -11,7 +11,7 @@
  * previously created by your alloc_grid function.
  *
  * @grid: pointers to be freed.
- * @height: height of grid. 
+ * @height: height of grid.
  *
  * Return: nothing
  */
