@@ -7,14 +7,14 @@
 #include <stdlib.h>
 
 /**
- * _strdup - eturns a pointer to a newly allocated 
- * space in memory, which contains a copy of the 
- * string given as a parameter. 
+ * _strdup - eturns a pointer to a newly allocated
+ * space in memory, which contains a copy of the
+ * string given as a parameter.
  *
  * @str: argument counter.
  *
  * Return: NULL if str = NULL or insufficient memory was available
- * */
+ */
 char *_strdup(char *str)
 {
 	char *p;
