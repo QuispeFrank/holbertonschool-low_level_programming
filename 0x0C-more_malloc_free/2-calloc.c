@@ -24,7 +24,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 		return (NULL);
 
 	for (i = 0; i <= lens; i++)
-		ptr[i] = '0';
+		ptr[i] = 0;
 
 	return (ptr);
 }
