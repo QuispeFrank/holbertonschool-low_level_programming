@@ -1,3 +1,5 @@
+#include "function_pointers.h"
+
 /**
  * print_name - a function that prints a name.
  * @name: name to be printed.
@@ -5,11 +7,14 @@
  *
  * Return: nothing.
  */
+
 void print_name(char *name, void (*f)(char *))
 {
-	if (name == 0)
+	/* argument validation */
+	if (name ==  NULL)
 		return;
-	if (f == 0)
+	if (f == NULL)
 		return;
+
 	f(name);
 }
