@@ -31,7 +31,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 {
 	va_list argptr;
 	unsigned int i;
-	char *nil = "nil";
+	char *nil = "(nil)";
 
 	/* argument validation */
 	if (n == 0)
@@ -39,9 +39,6 @@ void print_strings(const char *separator, const unsigned int n, ...)
 		printf("\n");
 		return;
 	}
-
-	/*  */
-
 
 	/* va_start & va_end */
 	va_start(argptr, n);
