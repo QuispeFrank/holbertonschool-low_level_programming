@@ -84,12 +84,14 @@ void print_all(const char * const format, ...)
 	char select_format[] = "cifs";
 	void (*pf[])(va_list, int) = {printsc, printsc, printsf, printss};
 
+	/* argument validation */
 	if (format == NULL)
 	{
 		printf("\n");
 		return;
 	}
 
+	/* counting all the specials caracters inside format */
 	all_specials = count_special(format, select_format);
 
 	/* va_start & va_end */
@@ -106,7 +108,7 @@ void print_all(const char * const format, ...)
 			if (format[i] == select_format[j])
 			{
 				counter_special++;
-				pf[j](argptr, i);
+				pf[j](argptr, j);
 				(counter_special < all_specials) ? printf(", ") : (j = 3);
 			}
 		}
