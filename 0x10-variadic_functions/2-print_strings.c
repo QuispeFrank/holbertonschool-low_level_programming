@@ -1,7 +1,7 @@
 #include "variadic_functions.h"
 
 /**
- * test_string_null - a function that test if some
+ * nul - a function that test if some
  * char pointer points to a null.
  *
  * @pt_nil: pointer to string "nil".
@@ -11,7 +11,7 @@
  * - @string otherwise.
  */
 
-char *test_string_null(char *pt_nil, char *string)
+char *nul(char *pt_nil, char *string)
 {
 	if (string == NULL)
 		return (pt_nil);
@@ -45,10 +45,10 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	for (i = 0; i < n - 1; i++)
 	{
 		if (separator == NULL)
-			printf("%s", test_string_null(nil, va_arg(argptr, char *)));
+			printf("%s", nul(nil, va_arg(argptr, char *)));
 		else
-			printf("%s%s", test_string_null(nil, va_arg(argptr, char *)), separator);
+			printf("%s%s", nul(nil, va_arg(argptr, char *)), separator);
 	}
-	printf("%s\n", test_string_null(nil, va_arg(argptr, char *)));
+	printf("%s\n", nul(nil, va_arg(argptr, char *)));
 	va_end(argptr);
 }
