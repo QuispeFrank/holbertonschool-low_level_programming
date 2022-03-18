@@ -33,6 +33,9 @@ list_t *add_node(list_t **head, const char *str)
 	/* creo el nodo */
 	list_t *node = malloc(sizeof(list_t));
 
+	if (node == NULL)
+		return (NULL);
+
 	/* validacion */
 	if (str == NULL)
 	{
