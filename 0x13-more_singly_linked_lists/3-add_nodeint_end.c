@@ -4,14 +4,14 @@
  * at the beginning of a list_t list
  * @head: head of the linked list
  * @n: needs to be duplicated
- * Return: the address of the new element, or
- * NULL if it failed
+ * Return: the address of the new element, or NULL
+ * if it failed.
  */
 
 listint_t *add_nodeint_end(listint_t **head, const int n)
 {
 	/* creating the last nodo */
-	*last_node = malloc(sizeof(listint_t));
+	listint_t *last_node = malloc(sizeof(listint_t));
 
 	listint_t *ptr;
 
@@ -31,5 +31,6 @@ listint_t *add_nodeint_end(listint_t **head, const int n)
 	}
 	last_node->n = n;
 	last_node->next = NULL;
+
 	return (last_node);
 }
