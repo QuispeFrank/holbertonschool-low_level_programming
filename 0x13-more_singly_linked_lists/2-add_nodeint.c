@@ -5,8 +5,8 @@
  * at the beginning of a list_t list
  * @head: head of the linked list
  * @n: data type int
- * Return: the address of the new element, or
- * NULL if it failed
+ * Return:  the address of the new element,
+ * or NULL if it failed
  */
 
 listint_t *add_nodeint(listint_t **head, const int n)
@@ -15,13 +15,10 @@ listint_t *add_nodeint(listint_t **head, const int n)
 	listint_t *node = malloc(sizeof(listint_t));
 	/* validation */
 	if (node)
-	return (NULL);
-
+		return (NULL);
 	node->n = n;
 	node->next = *head;
-
 	/* head apunta al nuevo nodo */
 	*head = node;
 	return (node);
 }
-
