@@ -9,7 +9,8 @@
  * should be added.
  * @n: data.
  *
- * Return: all nodes data sum.
+ * Return: the address of the new node, or NULL if it 
+ * failed.
  */
 
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
@@ -18,14 +19,16 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	listint_t *node;
 
 	/* validacion head */
+	if(head == NULL)
+		return (NULL);	
+	if (*head == NULL)
+		return (NULL);
 
 	/* creacion y validacion del nuevo nodo */
 	node = malloc(sizeof(listint_t));
 	if (node == NULL)
-	{
-		free(node);
 		return (NULL);
-	}
+
 	node->n = n;
 	ptr = *head;
 
@@ -36,7 +39,7 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 		*head = node;
 		return (node);
 	}
-
+	/* caso normal */
 	while (--idx)
 	{
 		if (ptr->next == NULL)
