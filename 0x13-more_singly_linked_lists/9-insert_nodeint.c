@@ -18,7 +18,7 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	listint_t *node;
 
 	/* validacion head */
-	if (!(*head))
+	if (*head == NULL || head == NULL)
 		return (NULL);
 
 	/* creacion y validacion del nuevo nodo */
@@ -45,9 +45,6 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 			return (NULL);
 		ptr = ptr->next;
 	}
-
-	if (ptr->next == NULL)
-		return (NULL);
 
 	node->next = ptr->next;
 	ptr->next = node;
