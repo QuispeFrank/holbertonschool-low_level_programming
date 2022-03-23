@@ -9,7 +9,7 @@
  * should be added.
  * @n: data.
  *
- * Return: the address of the new node, or NULL if it 
+ * Return: the address of the new node, or NULL if it
  * failed.
  */
 
@@ -19,8 +19,8 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	listint_t *node;
 
 	/* validacion head */
-	if(head == NULL)
-		return (NULL);	
+	if (head == NULL)
+		return (NULL);
 	if (*head == NULL)
 		return (NULL);
 
@@ -39,7 +39,7 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 		*head = node;
 		return (node);
 	}
-	/* caso normal */
+	/* asignacion */
 	while (--idx)
 	{
 		if (ptr->next == NULL)
