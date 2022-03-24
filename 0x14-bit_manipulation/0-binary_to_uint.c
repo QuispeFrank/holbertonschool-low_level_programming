@@ -30,11 +30,13 @@ unsigned int binary_to_uint(const char *b)
 	int i = 0,  len = 0;
 	unsigned int sum = 0;
 
+	/* validacion b nulo*/
 	if (b == NULL)
 		return (0);
 
 	len = _strlen_recursion(b);
-	/*validacion del puntero*/
+
+	/* validacion del puntero */
 	while (*(b + i) != '\0')
 	{
 		if (b[i] >= 48 && b[i] <= 49)
@@ -43,9 +45,9 @@ unsigned int binary_to_uint(const char *b)
 			return (0);
 	}
 
+	/* operation */
 	for (i = 0; b[i]; i++)
-	{
 		sum += (b[i] - 48) << (len - (i + 1));
-	}
+
 	return (sum);
 }
