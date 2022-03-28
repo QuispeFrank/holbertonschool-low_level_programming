@@ -40,9 +40,9 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	/* validacion escritura correcta */
 	write_success = write(STDOUT_FILENO, buffer, letters);
-	if (write_success == -1)
+	if (write_success == -1 || (read_success != write_success))
 		return (0);
 
 	free(buffer);
-	return (read_success);
+	return (write_success);
 }
