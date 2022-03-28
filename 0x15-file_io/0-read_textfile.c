@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
  * read_textfile - a function that reads a text file and
@@ -15,8 +16,7 @@
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	ssize_t file_descriptor;
-	ssize_t read_success, write_success;
+	ssize_t file_descriptor, bytes_read, bytes_written;
 	char *buffer;
 
 	/* validacion del filename */
@@ -31,18 +31,28 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	/* validacion del file descriptor */
 	file_descriptor = open(filename, O_RDONLY);
 	if (file_descriptor == -1)
+	{
+		free(buffer);
 		return (0);
+	}
 
 	/* validacion de lectura correcta */
-	read_success = read(file_descriptor, buffer, letters);
-	if (read_success == -1)
+	bytes_read = read(file_descriptor, buffer, letters);
+	if (bytes_read == -1)
+	{
+		free(buffer);
 		return (0);
+	}
 
 	/* validacion escritura correcta */
-	write_success = write(STDOUT_FILENO, buffer, letters);
-	if (write_success == -1 || (read_success != write_success))
+	bytes_written = write(STDOUT_FILENO, buffer, bytes_read);
+	if (bytes_written != bytes_read)
+	{
+		free(buffer);
 		return (0);
+	}
 
 	free(buffer);
-	return (write_success);
+	close(file_descriptor);
+	return (bytes_written);
 }
