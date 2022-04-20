@@ -8,13 +8,12 @@
 
 int main(void)
 {
-	int i;
+	int ascii;
 
-	for (i = 48; i <= 57; i++)
-	{
-		putchar(i);
-	}
-		putchar(10);
+	/* prints from 0 to 9 ascii characters */
+	for (ascii = 48; ascii <= 57; ascii++)
+		putchar(ascii);
+	putchar(10);
 
-		return (0);
+	return (0);
 }
