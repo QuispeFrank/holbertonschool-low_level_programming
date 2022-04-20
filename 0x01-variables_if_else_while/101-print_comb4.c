@@ -8,29 +8,26 @@
 
 int main(void)
 {
-	int  a, b, c;
+	int  cen, dec, uni;
 
-	for (a = 48; a <= 55; a++)
+	/* cen range 0-7 */
+	for (cen = '0'; cen <= '7'; cen++)
 	{
-
-	for (b = a + 1; b <= 56; b++)
-	{
-
-	for (c = b + 1; c <= 57; c++)
-	{
-	putchar(a);
-	putchar(b);
-	putchar(c);
-	if (a == 55 && b == 56 && c == 57)
-	{
-	}
-	else
-	{
-	putchar(44);
-	putchar(32);
-	}
-	}
-	}
+		/* dec range 0-8 */
+		for (dec = cen + 1; dec <= '8'; dec++)
+		{
+			/* uni range 0-9 */
+			for (uni = dec + 1; uni <= '9'; uni++)
+			{
+				putchar(cen);
+				putchar(dec);
+				putchar(uni);
+				if (cen + dec + uni == 168)
+					break;
+				putchar(44);
+				putchar(32);
+			}
+		}
 	}
 	putchar(10);
 
