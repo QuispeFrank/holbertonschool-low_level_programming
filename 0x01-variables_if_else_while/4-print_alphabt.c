@@ -10,6 +10,7 @@ int main(void)
 {
 	int letter;
 
+	/* prints the alphabet except e&q */
 	for (letter = 'a'; letter <= 'z'; letter++)
 	{
 		if (letter != 'e' && letter != 'q')
