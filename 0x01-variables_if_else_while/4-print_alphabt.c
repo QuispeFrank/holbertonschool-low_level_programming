@@ -8,19 +8,14 @@
 
 int main(void)
 {
-	int i;
+	int letter;
 
-	for (i = 97; i <= 122; i++)
+	for (letter = 'a'; letter <= 'z'; letter++)
 	{
-		if (i == 101 || i == 113)
-		{
-		}
-		else
-		{
-			putchar(i);
-		}
+		if (letter != 'e' && letter != 'q')
+			putchar(letter);
 	}
-		putchar(10);
+	putchar(10);
 
-		return (0);
+	return (0);
 }
