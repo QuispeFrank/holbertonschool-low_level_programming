@@ -8,21 +8,20 @@
 
 int main(void)
 {
-	int i;
+	int ascii;
 
-	for (i = 48; i <= 57; i++)
+	/* prints 0, 1, .... 8, 9 */
+	for (ascii = 48; ascii <= 57; ascii++)
 	{
-		putchar(i);
-		if (i < 57)
+		putchar(ascii);
+		if (ascii == 57)
+			putchar(10);
+		else
 		{
 			putchar(44);
 			putchar(32);
 		}
-		if (i == 57)
-		{
-			putchar(10);
-		}
 	}
 
-		return (0);
+	return (0);
 }
