@@ -8,13 +8,12 @@
 
 int main(void)
 {
-	int i;
+	int digit;
 
-	for (i = 0; i <= 9; i++)
-	{
-		printf("%d", i);
-	}
-		putchar(10);
+	/* prints 0-9 digits */
+	for (digit = 0; digit <= 9; digit++)
+		printf("%d", digit);
+	putchar(10);
 
-		return (0);
+	return (0);
 }
