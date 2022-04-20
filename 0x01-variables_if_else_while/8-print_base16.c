@@ -8,17 +8,14 @@
 
 int main(void)
 {
-	int i;
+	char hexa;
 
-	for (i = 48; i <= 57; i++)
-	{
-		putchar(i);
-	}
-	for (i = 97; i <= 102; i++)
-	{
-		putchar(i);
-	}
-		putchar(10);
+	/* prints 0-f hexadecimal numbers */
+	for (hexa = '0'; hexa <= '9'; hexa++)
+		putchar(hexa);
+	for (hexa = 'a'; hexa <= 'f'; hexa++)
+		putchar(hexa);
+	putchar(10);
 
-		return (0);
+	return (0);
 }
