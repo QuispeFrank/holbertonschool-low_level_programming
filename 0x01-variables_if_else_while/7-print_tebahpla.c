@@ -8,13 +8,12 @@
 
 int main(void)
 {
-	char i;
+	char letter;
 
-	for (i = 'z'; i >= 'a'; i--)
-	{
-		putchar(i);
-	}
-		putchar(10);
+	/* prints the reverse alphabet */
+	for (letter = 'z'; letter >= 'a'; letter--)
+		putchar(letter);
+	putchar(10);
 
-		return (0);
+	return (0);
 }
