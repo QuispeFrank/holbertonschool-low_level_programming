@@ -8,26 +8,22 @@
 
 int main(void)
 {
-	int  a, b;
+	int  dec, uni;
 
-	for (a = 48; a <= 56; a++)
+	/* dec range 0-8 */
+	for (dec = '0'; dec <= '8'; dec++)
 	{
-
-	for (b = a + 1; b <= 57; b++)
-	{
-		putchar(a);
-		putchar(b);
-		if (a == 56 && b == 57)
+		/* uni range (dec + 1) - 9 */
+		for (uni = dec + 1; uni <= '9'; uni++)
 		{
-		}
-		else
-		{
+			putchar(dec);
+			putchar(uni);
+			if (dec == '8' && uni == '9')
+				break;
 			putchar(44);
 			putchar(32);
 		}
 	}
-	}
-
 	putchar(10);
 
 	return (0);
