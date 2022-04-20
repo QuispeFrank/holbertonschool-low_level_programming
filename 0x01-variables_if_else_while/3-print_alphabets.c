@@ -8,17 +8,14 @@
 
 int main(void)
 {
-	char i;
+	char letter;
 
-	for (i = 'a'; i <= 'z'; i++)
-	{
-		putchar(i);
-	}
-	for (i = 'A'; i <= 'Z'; i++)
-	{
-		putchar(i);
-	}
-		putchar(10);
+	/* prints a-z & A-Z */
+	for (letter = 'a'; letter <= 'z'; letter++)
+		putchar(letter);
+	for (letter = 'A'; letter <= 'Z'; letter++)
+		putchar(letter);
+	putchar(10);
 
-		return (0);
+	return (0);
 }
