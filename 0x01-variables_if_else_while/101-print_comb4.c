@@ -10,7 +10,7 @@ int main(void)
 {
 	int  cen, dec, uni;
 
-	/* cen range 0-7 */
+	/* prints in the form [cen dec uni] -> [012] .. [789] */
 	for (cen = '0'; cen <= '7'; cen++)
 	{
 		/* dec range 0-8 */
@@ -19,17 +19,17 @@ int main(void)
 			/* uni range 0-9 */
 			for (uni = dec + 1; uni <= '9'; uni++)
 			{
+				if (uni != '2')
+					putchar(' ');
 				putchar(cen);
 				putchar(dec);
 				putchar(uni);
-				if (cen + dec + uni == 168)
-					break;
-				putchar(44);
-				putchar(32);
+				if (cen != '7')
+					putchar(',');
 			}
 		}
 	}
-	putchar(10);
+	putchar('\n');
 
 	return (0);
 }
