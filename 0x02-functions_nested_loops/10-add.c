@@ -2,16 +2,13 @@
 #include "main.h"
 
 /**
- * add - prints the last number of a nuber
- * @c: parameter to test
- * @d: parameter to test
+ * add - sum two numbers.
+ * @f: first number.
+ * @l: second number.
  *
- * Return: absolute value of a number
+ * Return: f + l.
  */
-int add(int c, int d)
+int add(int f, int l)
 {
-	int toreturn;
-
-	toreturn = c + d;
-	return (toreturn);
+	return (f + l);
 }
