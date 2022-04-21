@@ -17,7 +17,6 @@ int main(void)
 
 		for (undex = index + 1; undex < 100; undex++)
 		{
-
 			dec = (undex / 10) + '0';
 			uni = (undex % 10) + '0';
 
