@@ -9,9 +9,12 @@
  */
 int print_last_digit(int c)
 {
+	/* test last digit */
+	c = c % 10;
 	if (c < 0)
 		c = -1 * c;
-	/* prints uni */
+
+	/* prints last digit */
 	_putchar(c % 10 + '0');
 	return (c % 10);
 }
