@@ -9,22 +9,8 @@
  */
 int _abs(int c)
 {
-	int toreturn;
+	if (c < 0)
+		return (-1 * c);
 
-	if (c == 0)
-	{
-		toreturn = 0;
-	}
-	else
-	{
-		if (c < 0)
-		{
-			toreturn = -1 * c;
-		}
-		else
-		{
-			toreturn = c;
-		}
-	}
-	return (toreturn);
+	return (c);
 }
