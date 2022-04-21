@@ -25,7 +25,7 @@ int main(void)
 				putchar(' ');
 			putchar(um);
 			putchar(cen);
-			putchar(32);
+			putchar(' ');
 			putchar(dec);
 			putchar(uni);
 			if (index != 98)
