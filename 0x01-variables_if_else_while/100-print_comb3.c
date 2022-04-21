@@ -21,7 +21,7 @@ int main(void)
 			/* prints 01 .. 29 34 .. 89 */
 			putchar(dec);
 			putchar(uni);
-			if (index * undex == 72)
+			if (index == 8)
 				break;
 			putchar(',');
 			putchar(' ');
