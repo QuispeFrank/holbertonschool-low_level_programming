@@ -2,10 +2,10 @@
 #include "main.h"
 
 /**
- * _abs - prints absolute value of a number
- * @c: parameter to test
+ * _abs - function that prints the absolute value of a number.
+ * @c: number.
  *
- * Return: absolute value of a number
+ * Return: absolute value of @c.
  */
 int _abs(int c)
 {
