@@ -9,7 +9,10 @@ int main(void)
 {
 	int  dec, uni, index, undex;
 
-	/* prints in the form [index undex] -> [01] .. [89] */
+	/*
+	 * prints in the form:
+	 * [index undex] -> [dec uni] -> [01] .. [89]
+	 */
 	for (index = 0; index < 9; index++)
 	{
 		dec = index + '0';
