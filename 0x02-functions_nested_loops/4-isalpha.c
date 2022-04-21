@@ -12,13 +12,9 @@ int _isalpha(int c)
 {
 	int result;
 
-	if ((c >= 97 && c <= 122) || (c >= 65 && c <= 90))
-	{
-		result = 1;
-	}
-	else
-	{
-		result = 0;
-	}
-	return (result);
+	/* checks if c is a letter */
+	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
+		return (1);
+
+	return (0);
 }
