@@ -12,7 +12,6 @@ int main(void)
 	/* prints in the form: [index undex] -> [00 01] .. [98 99] */
 	for (index = 0; index < 99; index++)
 	{
-
 		um = (index / 10) + '0';
 		cen = (index % 10) + '0';
 
