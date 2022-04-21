@@ -19,12 +19,12 @@ int main(void)
 			uni = undex + '0';
 
 			/* prints 01 .. 29 34 .. 89 */
+			if (undex != 1)
+				putchar(' ');
 			putchar(dec);
 			putchar(uni);
-			if (index == 8)
-				break;
-			putchar(',');
-			putchar(' ');
+			if (index != 8)
+				putchar(',');
 		}
 	}
 	putchar('\n');
