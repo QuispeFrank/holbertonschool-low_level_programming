@@ -2,34 +2,25 @@
 #include "main.h"
 
 /**
- * jack_bauer - prints the last number of a nuber
+ * jack_bauer - prints all [hour:min] in a day.
  *
- * Return: absolute value of a number
+ * Return: nothing.
  */
 void jack_bauer(void)
 {
-	int m1, m2, h1, h2;
+	int hour, min;
 
-	for (h1 = 0; h1 <= 2; h1++)
+	for (hour = 0; hour < 24; hour++)
 	{
-	for (h2 = 0; h2 <= 9; h2++)
-	{
-	for (m1 = 0; m1 <= 5; m1++)
-	{
-	for (m2 = 0; m2 <= 9; m2++)
-	{
-		_putchar(h1 + 48);
-		_putchar(h2 + 48);
-		_putchar(58);
-		_putchar(m1 + 48);
-		_putchar(m2 + 48);
-		_putchar(10);
-		if (h1 == 2 && h2 == 3 && m1 == 5 && m2 == 9)
+		for (min = 0; min < 60; min++)
 		{
-			h2 = 10;
+			/* .. tic toc .. */
+			_putchar('0' + (hour / 10));
+			_putchar('0' + (hour % 10));
+			_putchar(':');
+			_putchar('0' + (min / 10));
+			_putchar('0' + (min % 10));
+			_putchar('\n');
 		}
-	}
-	}
-	}
 	}
 }
