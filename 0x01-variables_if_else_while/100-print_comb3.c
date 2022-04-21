@@ -12,11 +12,11 @@ int main(void)
 	/* prints in the form [index undex] -> [01] .. [89] */
 	for (index = 0; index < 9; index++)
 	{
-		dec = (index % 10) + '0';
+		dec = index + '0';
 
 		for (undex = index + 1; undex < 10; undex++)
 		{
-			uni = (undex % 10) + '0';
+			uni = undex + '0';
 
 			/* prints 01 .. 29 34 .. 89 */
 			putchar(dec);
