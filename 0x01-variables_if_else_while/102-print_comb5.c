@@ -5,46 +5,36 @@
  *
  * Return: Always 0 (Success)
  */
-
 int main(void)
 {
-	int  a, b, c, d, aux = 0;
+	int um, cen, dec, uni, index, undex;
 
-	for (a = 48; a <= 57; a++)
+	/* prints in the form: [index undex] -> [00 01] .. [98 99] */
+	for (index = 0; index < 99; index++)
 	{
-	for (b = 48; b <= 57; b++)
-	{
-		if (a == 57 && b == 57)
-		{}
-		else
+
+		um = (index / 10) + '0';
+		cen = (index % 10) + '0';
+
+		for (undex = index + 1; undex < 100; undex++)
 		{
-			for (c = a; c <= 57; c++)
-			{
-				for (d = 48; d <= 57; d++)
-				{
-				if (aux != b)
-				{
-					d = b + 1;
-					aux = b;
-					if (b == 57)
-					{
-						d = 48;
-						c++;
-					}
-				}
-				putchar(a);
-				putchar(b);
-				putchar(32);
-				putchar(c);
-				putchar(d);
 
-			if (a == 57 && b == 56 && c == 57 && d == 57)
-			{}
-			else
-			{
-				putchar(44);
-				putchar(32);
-			}}}}}}
-	putchar(10);
+			dec = (undex / 10) + '0';
+			uni = (undex % 10) + '0';
+
+			/* prints 00 01 .. 41 42 .. 98 99 */
+			if (undex != 1)
+				putchar(' ');
+			putchar(um);
+			putchar(cen);
+			putchar(32);
+			putchar(dec);
+			putchar(uni);
+			if (index != 98)
+				putchar(',');
+		}
+	}
+	putchar('\n');
+
 	return (0);
 }
