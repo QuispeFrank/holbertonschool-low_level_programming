@@ -10,27 +10,16 @@
  */
 int print_sign(int c)
 {
-	int toreturn;
-	int toprint;
-
-	if (c == 0)
+	/* can print -, 0, + */
+	if (c < 0)
 	{
-		toreturn = 0;
-		toprint = 48;
+		_putchar('-');
+		return (-1);
 	}
+	if (c > 0)
+		_putchar ('+');
 	else
-	{
-		if (c < 0)
-		{
-			toreturn = -1;
-			toprint = 45;
-		}
-		else
-		{
-			toreturn = 1;
-			toprint = 43;
-		}
-	}
-	_putchar(toprint);
-	return (toreturn);
+		_putchar ('0');
+
+	return (c > 0);
 }
