@@ -9,7 +9,10 @@ int main(void)
 {
 	int um, cen, dec, uni, index, undex;
 
-	/* prints in the form: [index undex] -> [00 01] .. [98 99] */
+	/* 
+	 * prints in the form:
+	 * [index undex] -> [um cen dec uni] -> [00 01] .. [98 99]
+	 */
 	for (index = 0; index < 99; index++)
 	{
 		um = (index / 10) + '0';
