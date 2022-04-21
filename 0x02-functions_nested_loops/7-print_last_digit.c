@@ -2,25 +2,16 @@
 #include "main.h"
 
 /**
- * print_last_digit - prints the last number of a nuber
- * @c: parameter to test
+ * print_last_digit - prints the last digit of a number.
+ * @c: number.
  *
- * Return: absolute value of a number
+ * Return: the value of the last digit.
  */
 int print_last_digit(int c)
 {
-	int toreturn;
-	int toprint;
-
 	if (c < 0)
-	{
-		c = c + 10;
-		c = c * -1;
-	}
-
-	toprint = c % 10;
-	toreturn = toprint;
-
-	_putchar(toprint + 48);
-	return (toreturn);
+		c = -1 * c;
+	/* prints uni */
+	_putchar(c % 10 + '0');
+	return (c % 10);
 }
