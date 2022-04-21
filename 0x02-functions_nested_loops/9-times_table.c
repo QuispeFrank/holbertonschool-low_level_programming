@@ -2,40 +2,44 @@
 #include "main.h"
 
 /**
- * times_table - prints the last number of a nuber
+ * times_table - prints 0-9 multiplication table.
+ *
+ * Description: a function that prints the 9 times
+ * table, starting with 0.
  *
  * Return: nothing
  */
 void times_table(void)
 {
-	int x, y, a, b, res;
+	int row, col, dec, uni;
 
-	for (y = 0; y <= 9; y++)
+	/*
+	 * prints in the form:
+	 * [dec uni ',' ' '] -> [11, ]
+	 */
+	for (row = 0; row < 10; row++)
 	{
-		for (x = 0; x <= 9; x++)
+		for (col = 0; col < 10; col++)
 		{
-			res = x * y;
-			if (res > 9)
+			dec = (row * col) / 10;
+			uni = (row * col) % 10;
+
+			/* prints dec */
+			if (dec != 0)
+				_putchar('0' + dec);
+			else if (col != 0)
+				_putchar(' ');
+
+			/* prints uni */
+			_putchar('0' + uni);
+
+			/* prints ", " */
+			if (col != 9)
 			{
-				a = res / 10;
-				b = res % 10;
-				_putchar(a + 48);
-				_putchar(b + 48);
-			}
-			else
-			{
-				if (x != 0)
-				{
-					_putchar(32);
-				}
-				_putchar(res + 48);
-			}
-			if (x != 9)
-			{
-				_putchar(44);
-				_putchar(32);
+				_putchar(',');
+				_putchar(' ');
 			}
 		}
-		_putchar(10);
+		_putchar('\n');
 	}
 }
