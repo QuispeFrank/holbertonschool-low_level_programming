@@ -5,26 +5,29 @@
  *
  * Return: Always 0 (Success)
  */
-
 int main(void)
 {
-	int  dec, uni;
+	int  dec, uni, index, undex;
 
-	/* dec range 0-8 */
-	for (dec = '0'; dec <= '8'; dec++)
+	/* prints in the form [index undex] -> [01] .. [89] */
+	for (index = 0; index < 9; index++)
 	{
-		/* uni range (dec + 1) - 9 */
-		for (uni = dec + 1; uni <= '9'; uni++)
+		dec = (index % 10) + '0';
+
+		for (undex = index + 1; undex < 10; undex++)
 		{
+			uni = (undex % 10) + '0';
+
+			/* prints 01 .. 29 34 .. 89 */
 			putchar(dec);
 			putchar(uni);
-			if (dec == '8' && uni == '9')
+			if (index * undex == 72)
 				break;
-			putchar(44);
-			putchar(32);
+			putchar(',');
+			putchar(' ');
 		}
 	}
-	putchar(10);
+	putchar('\n');
 
 	return (0);
 }
