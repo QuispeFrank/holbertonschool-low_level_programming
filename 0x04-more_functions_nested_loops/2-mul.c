@@ -1,17 +1,13 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
- * mul - Determine if a character is a number
- * @a: value to test
- * @b: value to test
- * Return: ...
+ * mul - multiplies two integers.
+ * @a: first number.
+ * @b: second number.
+ *
+ * Return: @a * @b.
  */
 int mul(int a, int b)
 {
-	int result;
-
-	result = a * b;
-
-	return (result);
+	return (a * b);
 }
