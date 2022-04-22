@@ -2,21 +2,15 @@
 #include <stdio.h>
 
 /**
- * _isupper - Determine if a character is capital
- * @n: value to test
- * Return: ...
+ * _isupper - checks for uppercase character.
+ * @ascii: character.
+ *
+ * Return: 1 in uppercase, otherwise 0.
  */
-int _isupper(int n)
+int _isupper(int ascii)
 {
-	int isupper;
+	if (ascii >= 'A' && ascii <= 'Z')
+		return(1);
 
-	if (n >= 65 && n <= 90)
-	{
-		isupper = 1;
-	}
-	else
-	{
-		isupper = 0;
-	}
-	return (isupper);
+	return (0);
 }
