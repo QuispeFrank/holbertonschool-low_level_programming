@@ -10,7 +10,7 @@
 int _isupper(int ascii)
 {
 	if (ascii >= 'A' && ascii <= 'Z')
-		return(1);
+		return (1);
 
 	return (0);
 }
