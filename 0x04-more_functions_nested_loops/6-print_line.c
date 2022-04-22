@@ -1,10 +1,10 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
- * print_line - Determine if a character is a number
- * @n: number of lines
- * Return: ...
+ * print_line - draws a straight line in the terminal.
+ * @n: number of lines.
+ *
+ * Return: nothing.
  */
 void print_line(int n)
 {
