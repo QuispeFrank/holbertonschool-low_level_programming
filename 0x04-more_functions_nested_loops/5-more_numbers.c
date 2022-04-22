@@ -2,25 +2,26 @@
 #include <stdio.h>
 
 /**
- * more_numbers - Determine if a character is a number
- * Return: ...
+ * more_numbers - prints 10 times the numbers, from 0 to 14.
+ *
+ * Return: nothing.
  */
 void more_numbers(void)
 {
-	int d, u, number, times;
+	int repeat, index, uni, dec;
 
-	for (times = 1; times <= 10; times++)
+	for (repeat = 0; repeat < 10; repeat++)
 	{
-		for (number = 0; number <= 14; number++)
+		for (index = 0; index < 15; index++)
 		{
-			if (number >= 10)
-			{
-				d = 1;
-				_putchar(d + 48);
-			}
-			u = number % 10;
-			_putchar(u + 48);
+			dec = (index / 10) + '0';
+			uni = (index % 10) + '0';
+
+			/* prints 01 ..89.. 1314 */
+			if (index > 9)
+				_putchar(dec);
+			_putchar(uni);
 		}
-		_putchar(10);
+		_putchar('\n');
 	}
 }
