@@ -1,31 +1,27 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
- * print_diagonal - prints '\' caracter n times
- * @n: number of lines
- * Return: ...
+ * print_diagonal - draws a diagonal line on the terminal.
+ * @slashes: number of inverted slashes to be printed.
+ *
+ * Return: nothing.
  */
-void print_diagonal(int n)
+void print_diagonal(int slashes)
 {
-	int slashes, spaces;
+	int spaces, index = 0;
 
-	if (n > 0)
+	/* prints and exits */
+	if (slashes <= 0)
+		_putchar('\n');
+
+	/* prints slashes */
+	for ( ; slashes > 0; slashes--, index++)
 	{
-		for (slashes = 1; slashes <= n; slashes++)
-		{
-			spaces = slashes - 1;
-			while (spaces > 0)
-			{
-				_putchar(32);
-				spaces--;
-			}
-			_putchar(92);
-			_putchar(10);
-		}
-	}
-	else
-	{
-		_putchar(10);
+		/* prints spaces */
+		for (spaces = 0; spaces < index; spaces++)
+			_putchar(' ');
+
+		_putchar('\\');
+		_putchar('\n');
 	}
 }
