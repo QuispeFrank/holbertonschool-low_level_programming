@@ -1,22 +1,15 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
- * _isdigit - Determine if a character is a number
- * @n: value to test
- * Return: ...
+ * _isdigit - checks for a digit (0 through 9).
+ * @ascii: character.
+ *
+ * Return: 1 if digit was found, 0 otherwise.
  */
-int _isdigit(int n)
+int _isdigit(int ascii)
 {
-	int isdigit;
+	if (ascii >= '0' && ascii <= '9')
+		return (1);
 
-	if (n >= 48 && n <= 57)
-	{
-		isdigit = 1;
-	}
-	else
-	{
-		isdigit = 0;
-	}
-	return (isdigit);
+	return (0);
 }
