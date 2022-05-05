@@ -50,17 +50,13 @@ dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
  */
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
-	dlistint_t *ptr_next = NULL;
+	dlistint_t *ptr_next = *h;
 	dlistint_t *ptr_prev = NULL;
 	dlistint_t *new_node = NULL;
 	size_t len;
 
-	if (h == NULL)
-		return (NULL);
-	ptr_next = *h;
-
 	len = dlistint_len(*h);
-	if (idx >= len + 1)
+	if (idx > len)
 		return (NULL);
 
 	/* inicio y final */
