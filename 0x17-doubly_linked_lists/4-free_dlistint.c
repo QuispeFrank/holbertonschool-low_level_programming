@@ -8,6 +8,7 @@
 void free_dlistint(dlistint_t *head)
 {
 	dlistint_t *ptr = head;
+
 	if (ptr != NULL && ptr->next != NULL)
 		free_dlistint(ptr->next);
 	free(ptr);
