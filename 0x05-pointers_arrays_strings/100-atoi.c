@@ -5,16 +5,15 @@
  */
 int _atoi(char *s)
 {
-	int index = 0;
+	int i = 0, sign = 1;
 	unsigned int num = 0;
-	int sign = 1;
 
-	for (; s[index] < '0' || s[index] > '9'; index++)
-		if (s[index] == '-')
+	for (; s[i] && (s[i] < '0' || s[i] > '9'); i++)
+		if (s[i] == '-')
 			sign = -sign;
 
-	for (; s[index] >= '0' && s[index] <= '9'; index++)
-		num = (num * 10) + (s[index] - '0');
+	for (; s[i] >= '0' && s[i] <= '9'; i++)
+		num = (num * 10) + (s[i] - '0');
 
 	return (sign * num);
 }
