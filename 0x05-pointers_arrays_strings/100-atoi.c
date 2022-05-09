@@ -10,10 +10,8 @@ int _atoi(char *s)
 	int sign = 1;
 
 	for (; s[index] < '0' || s[index] > '9'; index++)
-		;
-
-	if ((index - 1 >= 0) && s[index - 1] == '-')
-		sign = -1;
+		if (s[index] == '-')
+			sign = -sign;
 
 	for (; s[index] >= '0' && s[index] <= '9'; index++)
 		num = (num * 10) + (s[index] - '0');
