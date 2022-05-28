@@ -28,6 +28,7 @@ hash_node_t *ad_no_nd(hash_node_t **head, const char *key, const char *value)
 		{
 			free(tmp->value);
 			tmp->value = strdup(value);
+			free(node_beg);
 			return (tmp);
 		}
 		tmp = tmp->next;
