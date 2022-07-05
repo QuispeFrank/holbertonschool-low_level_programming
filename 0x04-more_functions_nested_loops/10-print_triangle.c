@@ -1,32 +1,25 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
- * print_triangle - prints '\' caracter n times
- * @n: number of lines
- * Return: ...
+ * print_triangle - prints a triangle, followed by a new line.
+ * @height: the size of the triangle.
+ * Return: nothing.
  */
-void print_triangle(int n)
+void print_triangle(int height)
 {
-	int michi, height, spaces;
+	int h, ast, spaces;
 
-	if (n > 0)
+	if (height <= 0)
 	{
-		for (height = 1; height <= n; height++)
-		{
-			for (spaces = 1; spaces <= n - height; spaces++)
-			{
-				_putchar(32);
-			}
-			for (michi = 1; michi <= height; michi++)
-			{
-				_putchar(35);
-			}
-			if (height != n)
-			{
-				_putchar(10);
-			}
-		}
+		_putchar('\n');
+		return;
 	}
-	_putchar(10);
+	for (h = 1; h <= height; h++)
+	{
+		for (spaces = height - h; spaces > 0; spaces--)
+			_putchar(' ');
+		for (ast = 1; ast <= h; ast++)
+			_putchar('#');
+		_putchar('\n');
+	}
 }
