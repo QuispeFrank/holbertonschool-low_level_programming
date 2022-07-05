@@ -1,8 +1,10 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
- * main - check the code
+ * main - 100-prime_factor.
+ * Description: a program that finds and prints
+ * the largest prime factor of the number 612852475143,
+ * followed by a new line.
  *
  * Return: Always 0.
  */
@@ -21,6 +23,6 @@ int main(void)
 		}
 	}
 	printf("%lu", rec);
-	putchar(10);
+	putchar('\n');
 	return (0);
 }
